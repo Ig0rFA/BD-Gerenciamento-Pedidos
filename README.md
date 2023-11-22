@@ -11,14 +11,12 @@ Nesta atividade iremos criar um sistema de gerenciamento de pedidos em um banco 
 	endereco varchar(100)
 	);
 
--- inserindo dados a tabela clientes.
 
 	insert into clientes (nome, email, telefone, endereco)values
 	('Igor','igor@gmail.com', '111222','rua sao paulo'),
 	('Joao','joao@gmail.com','333444','rua oliveiras filho'),
 	('Eduardo', 'eduardo@gmail.com', '555666', 'rua aparecido leme');
 
--- criando tabela pedidos.
 
 	create table pedidos(
 	id int primary key auto_increment not null,
@@ -28,7 +26,6 @@ Nesta atividade iremos criar um sistema de gerenciamento de pedidos em um banco 
 	foreign key (cliente_id) references clientes(id)
 	);
 
--- inserindo dados a tabela pedidos.
 
 	insert into pedidos (data_pedido, valor, cliente_id) values
 	('2022-01-06', 100.50, 1),
