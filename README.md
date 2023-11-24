@@ -47,8 +47,9 @@ call InsePedido(5,'2024-01-01',150.00);
 select * from pedidos;
 ```
 ## Etapa 3: Trigger
-
+```
 alter table clientes add TotalPedidos decimal(10, 2);
+```
 ```
 DELIMITER $$
 create trigger AtualizaTotalPedidos 
@@ -62,8 +63,7 @@ end$$
 DELIMITER ;
 
 
-	INSERT INTO Pedidos (cliente_id, data_pedido, valor)
-	VALUES (2, '2021-05-08', 80.00);
+	insert into Pedidos (cliente_id, data_pedido, valor) values (2, '2021-05-08', 80.00);
 
 select * from clientes;
 ```
